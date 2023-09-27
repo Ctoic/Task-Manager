@@ -40,6 +40,15 @@
 - Flask-RESTful also provides support for custom authentication and authorization.
 - Flask-RESTful also provides support for custom URL routing.
 
+# install Jinja2 for Flask Templates
+- Jinja2 is a template engine for Python. It is a text-based template language and thus can be used to generate any markup as well as source code.
+- Jinja2 is one of the most used template engines for Python. It is inspired by Django’s templating system but extends it with an expressive language that gives template authors a more powerful set of tools.
+- Jinja2 is a full-featured template engine for Python. It has full unicode support, an optional integrated sandboxed execution environment, widely used and BSD licensed.
+- Jinja2 is a modern and designer-friendly templating language for Python, modelled after Django’s templates. It is fast, widely used and secure with the optional sandboxed template execution environment.
+- Jinja2 is a template engine written in pure Python. It provides a Django inspired non-XML syntax but supports inline expressions and an optional sandboxed environment.
+
+
+
 A table which contain For prerequisite and installation of Flask and Flask-RESTful
 
 | Prerequisite | Installation |

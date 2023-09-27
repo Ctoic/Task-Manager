@@ -31,7 +31,6 @@ def Home():
 @app.route('/show')
 def Products():
     alltodo= TodoModel.query.all()
-    print(alltodo)
     return ('Products')
 
 
