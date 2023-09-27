@@ -26,3 +26,11 @@
 - Flask-RESTful also provides support for custom error handling.
 - Flask-RESTful also provides support for custom authentication and authorization.
 - Flask-RESTful also provides support for custom URL routing.
+
+A table which contain For prerequisite and installation of Flask and Flask-RESTful
+
+| Prerequisite | Installation |
+| --- | --- |
+| Python | [Python](https://www.python.org/downloads/) |
+| Flask | `pip install Flask` |
+| Flask-RESTful | `pip install Flask-RESTful` |
