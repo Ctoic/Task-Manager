@@ -16,6 +16,19 @@
 - Flask is used to create web resources
 - Flask is used to create web pages
 
+# Creating A database using Flask SQLAlchemy
+
+- for creating a database using Flask SQLAlchemy we need to install SQLAlchemy by running the command `pip install SQLAlchemy`
+- SQLAlchemy is a Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL.
+- SQLAlchemy provides a full suite of well known enterprise-level persistence patterns, designed for efficient and high-performing database access, adapted into a simple and Pythonic domain language.
+- SQLAlchemy provides a generalized interface for creating and executing database-agnostic code without needing to write SQL statements.
+- SQLAlchemy provides a core level of service, independent of the database engine used, which can be extended through the use of optional components such as ORM and database schema definition.
+
+# On Linux 
+- If you are unable to create a database using python shell it shows error sometimes 
+- Use flask Shell and create a database  (db.create_all())
+- 
+
 # Flask-RESTful
 
 - Flask-RESTful is an extension for Flask that adds support for quickly building REST APIs.
