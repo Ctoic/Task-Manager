@@ -1,5 +1,5 @@
 # flask Minimal app code 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -19,19 +19,25 @@ class TodoModel(db.Model):
         return f"{self.id} - {self.title}"
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def Home():
-    todo = TodoModel(title="first name ", desc= "Start Investing in stock exchange")
-    db.session.add(todo)
-    db.session.commit()
+    if request.method == 'POST':
+        title = request.form['title']
+        desc = request.form['desc']
+        todo = TodoModel(title=title, desc=desc)
+        db.session.add(todo)
+        db.session.commit()
 
-    return render_template('index.html')
+        
+    alltodo = TodoModel.query.all()
+    return render_template('index.html', alltodo=alltodo)
 
 # @route is a decorator which tells the app which URL should call the associated function 
 @app.route('/show')
 def Products():
     alltodo= TodoModel.query.all()
     return ('Products')
+
 
 
 # this is the main app which will run the app

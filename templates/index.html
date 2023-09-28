@@ -88,15 +88,15 @@
 
     <div class= 'container' mb-3>
       <h2> Add Tasks here  </h2>
-      <form>
+      <form action="/" method="POST">
         <div class="mb-3">
           <label for="title">Todo title</label>
-          <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter Your Task">
+          <input type="text" class="form-control" name="title"id="title" aria-describedby="emailHelp" placeholder="Enter Your Task">
           <small id="emailHelp" class="form-text text-muted">Put First things First :)</small>
         </div>
         <div class="mb-3">
           <label for="desc">Todo Descriptions</label>
-          <input type="text" class="form-control" id="desc" placeholder="Describe what todo">
+          <input type="text" class="form-control" name= "desc" id="desc" placeholder="Describe what todo">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
@@ -116,13 +116,17 @@
           </tr>
         </thead>
         <tbody>
-          
+          {% 
+            for todo in alltodo
+          %}
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{todo.title}}</td>
+            <td>{{todo.desc}}</td>
+            <td>{{todo.title}}</td>
           </tr>
+          {% endfor %}
+
         </tbody>
       </table>
       </div>
