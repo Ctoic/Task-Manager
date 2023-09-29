@@ -86,50 +86,80 @@
       </div>
     </nav>
 
-    <div class= 'container' mb-3>
-      <h2> Add Tasks here  </h2>
+    <div class="container" mb-3>
+      <h2>Add Tasks here</h2>
       <form action="/" method="POST">
         <div class="mb-3">
           <label for="title">Todo title</label>
-          <input type="text" class="form-control" name="title"id="title" aria-describedby="emailHelp" placeholder="Enter Your Task">
-          <small id="emailHelp" class="form-text text-muted">Put First things First :)</small>
+          <input
+            type="text"
+            class="form-control"
+            name="title"
+            id="title"
+            aria-describedby="emailHelp"
+            placeholder="Enter Your Task"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >Put First things First :)</small
+          >
         </div>
         <div class="mb-3">
           <label for="desc">Todo Descriptions</label>
-          <input type="text" class="form-control" name= "desc" id="desc" placeholder="Describe what todo">
+          <input
+            type="text"
+            class="form-control"
+            name="desc"
+            id="desc"
+            placeholder="Describe what todo"
+          />
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-dark">Submit</button>
       </form>
-
     </div>
 
-    <div class="container mb-3"> 
-      <h2 > Task Descriptions</h2>
+    <div class="container mb-3">
+      <h2>Task Descriptions</h2>
 
       <table class="table">
         <thead>
           <tr>
             <th scope="col">Number</th>
-            <th scope="col">title</th>
+            <th scope="col">Title</th>
             <th scope="col">Descriptions</th>
-            <th scope="col">time</th>
+            <th scope="col">Time</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
-          {% 
-            for todo in alltodo
-          %}
+          {% if alltodo|length==0%} 
+              NO RECORD FOUND
+          {%else%} 
+          {% for todo in alltodo %}
           <tr>
             <th scope="row">{{loop.index}}</th>
             <td>{{todo.title}}</td>
             <td>{{todo.desc}}</td>
             <td>{{todo.date_created}}</td>
+            <td>
+              <a
+                href="/delete/{{todo.id}}"
+                class="btn btn-outline-dark btn-sm mx-1"
+                >Delete</a
+              >
+            </td>
+            <td>
+              <a
+                href="/update/{{todo.id}}"
+                class="btn btn-outline-dark btn-sm mx-1"
+                >Update</a
+              >
+            </td>
           </tr>
           {% endfor %}
-
+          {% endif %}
         </tbody>
       </table>
-      </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

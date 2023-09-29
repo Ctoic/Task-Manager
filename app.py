@@ -33,10 +33,29 @@ def Home():
     return render_template('index.html', alltodo=alltodo)
 
 # @route is a decorator which tells the app which URL should call the associated function 
-@app.route('/show')
-def Products():
-    alltodo= TodoModel.query.all()
-    return ('Products')
+@app.route('/update/<int:id>', methods=['GET', 'POST'])
+def update(id):
+    if request.method == 'POST':
+        title = request.form['title']
+        desc = request.form['desc']
+        todo = TodoModel.query.filter_by(id=id).first()
+        todo.title = title
+        todo.desc = desc
+        db.session.add(todo)
+        db.session.commit()
+        return redirect(url_for('Home'))
+    todo = TodoModel.query.filter_by(id=id).first()
+    return render_template('update.html', todo=todo)
+
+@app.route('/delete/<int:id>')
+
+def delete(id):
+    todo = TodoModel.query.filter_by(id=id).first()
+    db.session.delete(todo)
+    db.session.commit()
+    return redirect(url_for('Home'))
+
+ 
 
 
 
