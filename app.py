@@ -55,6 +55,11 @@ def delete(id):
     db.session.commit()
     return redirect(url_for('Home'))
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+    
+
  
 
 
