@@ -79,7 +79,7 @@
             placeholder="Search"
             aria-label="Search"
           />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">
             Search
           </button>
         </form>
@@ -120,20 +120,23 @@
     <div class="container mb-3">
       <h2>Task Descriptions</h2>
 
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Number</th>
-            <th scope="col">Title</th>
-            <th scope="col">Descriptions</th>
-            <th scope="col">Time</th>
-            <th scope="col">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
+
           {% if alltodo|length==0%} 
-              NO RECORD FOUND
+          <div class="alert alert-dark" role="alert">
+              Please Add a Task First
+          </div>
           {%else%} 
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Number</th>
+                <th scope="col">Title</th>
+                <th scope="col">Descriptions</th>
+                <th scope="col">Time</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
           {% for todo in alltodo %}
           <tr>
             <th scope="row">{{loop.index}}</th>
@@ -155,10 +158,11 @@
               >
             </td>
           </tr>
-          {% endfor %}
-          {% endif %}
         </tbody>
       </table>
+          {% endfor %}
+          {% endif %}
+      
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

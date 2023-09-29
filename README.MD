@@ -47,9 +47,12 @@
 - Jinja2 is a modern and designer-friendly templating language for Python, modelled after Django’s templates. It is fast, widely used and secure with the optional sandboxed template execution environment.
 - Jinja2 is a template engine written in pure Python. It provides a Django inspired non-XML syntax but supports inline expressions and an optional sandboxed environment.
 
+# Filters in Jinja2
+
+- Jinja2 ships with many of filters. Filters in Jinja2 are a way of transforming template expressions from one kind of data into another. They are similar to functions in that they take arguments and produce an output. Filters are separated from the variable by a pipe symbol (|) and may have optional arguments in parentheses. Multiple filters can be chained. The output of one filter is applied to the next.
 
 
-A table which contain For prerequisite and installation of Flask and Flask-RESTful
+## A table which contain For prerequisite and installation of Flask and Flask-RESTful
 
 | Prerequisite | Installation |
 | --- | --- |
