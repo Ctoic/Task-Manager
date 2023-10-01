@@ -56,6 +56,11 @@
 - Jinja2 is a template engine for Python. It is a text-based template language and thus can be used to generate any markup as well as source code.
 - Jinja2 is one of the most used template engines for Python. It is inspired by Django’s templating system but extends it with an expressive language that gives template authors a more powerful set of tools.
 
+# Gunicorn an Amazing WSGI HTTP Server for Python
+- it can be installed by running the command `pip install gunicorn`
+- it will show the requirement of your project in a seprate file 
+- it will also show the version of gunicorn you are using
+- 
 ## A table which contain For prerequisite and installation of Flask and Flask-RESTful
 
 | Prerequisite | Installation |
@@ -63,3 +68,20 @@
 | Python | [Python](https://www.python.org/downloads/) |
 | Flask | `pip install Flask` |
 | Flask-RESTful | `pip install Flask-RESTful` |
+
+
+# Deployement of Flask App on Heroku
+- Heroku is a cloud platform as a service (PaaS) supporting several programming languages. One of the first cloud platforms, Heroku has been in development since June 2007, when it supported only the Ruby programming language, but now supports Java, Node.js, Scala, Clojure, Python, PHP, and Go.
+- Heroku is a cloud platform as a service (PaaS) supporting several programming languages. One of the first cloud platforms, Heroku has been in development since June 2007, when it supported only the Ruby programming language, but now supports Java, Node.js, Scala, Clojure, Python, PHP, and Go.
+- Steps to deploy a Flask App on Heroku
+- 1. Create a Heroku Account
+- 2. Install Heroku CLI
+- 3. Create a Heroku App
+- 4. Create a requirements.txt file
+- 5. Create a Procfile
+- 6. Push the code to Heroku
+- 7. Visit the URL of the application
+- 8. View the logs
+- 9. Scale the application
+- 10. Define Config Variables
+- 11. Deploying a Flask App on Heroku
