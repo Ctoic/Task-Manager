@@ -51,6 +51,10 @@
 
 - Jinja2 ships with many of filters. Filters in Jinja2 are a way of transforming template expressions from one kind of data into another. They are similar to functions in that they take arguments and produce an output. Filters are separated from the variable by a pipe symbol (|) and may have optional arguments in parentheses. Multiple filters can be chained. The output of one filter is applied to the next.
 
+# Template Inheritence in jinja2
+- Jinja2 supports template inheritance. Template inheritance allows you to build a base “skeleton” template that contains all the common elements of your site and defines blocks that child templates can override.
+- Jinja2 is a template engine for Python. It is a text-based template language and thus can be used to generate any markup as well as source code.
+- Jinja2 is one of the most used template engines for Python. It is inspired by Django’s templating system but extends it with an expressive language that gives template authors a more powerful set of tools.
 
 ## A table which contain For prerequisite and installation of Flask and Flask-RESTful
 

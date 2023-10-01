@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "Flask-Harry",
+			"path": "../Flask-Harry"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Flask-Harry"
+	}
+}
