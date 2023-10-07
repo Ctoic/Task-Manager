@@ -55,15 +55,23 @@ def delete(id):
     db.session.commit()
     return redirect(url_for('Home'))
 
+@app.route('/search', methods=['GET'])
+def search():
+    if request.method == 'GET':
+        search_query = request.args.get('search')
+        search_query = f"%{search_query}%"  # Adding wildcard '%' for partial matching
+        todos = TodoModel.query.filter(TodoModel.title.like(search_query)).all()
+        return render_template('search.html', todos=todos)
+    return redirect(url_for('Home'))
+
+
+
+
 @app.route('/about')
 def about():
     return render_template('about.html')
 
-
- 
-
-
-
+    
 # this is the main app which will run the app
 if __name__ == '__main__':
     app.run(debug=True)

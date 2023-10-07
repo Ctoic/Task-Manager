@@ -42,7 +42,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="/"
                 >Home <span class="sr-only">(current)</span></a
               >
             </li>
@@ -74,10 +74,11 @@
               >
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
+          <form class="form-inline my-2 my-lg-0" method='GET' action='/search'>
             <input
               class="form-control mr-sm-2"
-              type="search"
+              type="text"
+              name="query"
               placeholder="Search"
               aria-label="Search"
             />
@@ -97,6 +98,41 @@
 
 
   </body>
+<footer class="footer">
+  <div class="container-fluid">
+    <div class="row bg-dark text-light">
+      <div class="col-md-4 col-sm-4">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <h5>Address</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatum, quibusdam, quos, voluptate voluptas dolorum quia
+          voluptatibus quod quae quidem repellendus? Quisquam voluptatum,
+          quibusdam, quos, voluptate voluptas dolorum quia voluptatibus quod
+          quae quidem repellendus?
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <h5>Follow Us</h5>
+        <ul class="social-network">
+          <li><a href="#" class="fb tool-tip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" class="twitter tool-tip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#" class="gplus tool-tip" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#" class="linkedin tool-tip" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#" class="ytube tool-tip" title="You Tube"><i class="fa fa-youtube-play"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer> 
+    <!-- End row -->
+
 
  
   </div>
