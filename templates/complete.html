@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{%block title%}
+Home
+{%endblock title%}
+{%block body%}
+
+<div class="mb-3">
+    <label for="title">Todo title</label>
+    <input
+      type="text"
+      class="form-control"
+      name="title"
+      id="title"
+      aria-describedby="emailHelp"
+      placeholder="Enter Your Task"
+      value={{todo.title}}
+    />
+    <small id="emailHelp" class="form-text text-muted"
+      >Put First things First :)</small
+    >
+  </div>
+
+  {%endblock body%}
