@@ -9,12 +9,14 @@
 # Important Notes
 - Flask is a microframework
 - Flask is a class  
+- Flask is used to create web servers 
 - Flask is used to create an instance of web application
 - Flask is used to create web applications
 - Flask is used to create APIs
 - Flask is used to create web services
 - Flask is used to create web resources
 - Flask is used to create web pages
+
 
 # Creating A database using Flask SQLAlchemy
 
