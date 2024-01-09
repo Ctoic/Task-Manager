@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block body %}
-<h2>Search Results</h2>
-<ul>
-    {% for todo in todos %}
-        <li>{{ todo.title }} - {{ todo.desc }}</li>
-    {% endfor %}
-</ul>
+    <h2>Search Results</h2>
+    <ul>
+        {% for todo in todos %}
+            <li>{{ todo.title }} - {{ todo.desc }}</li>
+        {% endfor %}
+    </ul>
 {% endblock body %}

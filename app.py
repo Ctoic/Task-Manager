@@ -57,6 +57,7 @@ def delete(id):
         db.session.commit()
     return redirect(url_for('Home'))
 
+# Inside the `search` route
 @app.route('/search', methods=['GET'])
 def search():
     search_query = request.args.get('search')
@@ -65,6 +66,7 @@ def search():
         todos = TodoModel.query.filter(TodoModel.title.like(search_query)).all()
         return render_template('search.html', todos=todos)
     return redirect(url_for('Home'))
+
 
 @app.route('/about')
 def about():
